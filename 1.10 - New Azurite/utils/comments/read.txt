@@ -1,0 +1,23 @@
+New Things:
+
+- New UI Library [optimized]
+- Anti HTTP Spy Block [Level-1]
+
+Features:
+
+- Anti HTTP Spy Block [Level-2]
+--> Level-2 == Signature Algorithm
+- Key System + Auth
+- IA Azurite
+- Exploit Internal API Azurite
+
+Support:
+
+- Synapse v2
+- Scriptware v2
+
+Unsupport:
+
+- IOS & Android Exploits
+- Linux & Mac Exploits
+- Synapse v3

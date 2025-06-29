@@ -1,0 +1,5 @@
+local Root = game.Players.LocalPlayer.Character:WaitForChild('Humanoid')
+
+Root.Changed:Connect(function(a)
+	print('Humanoid | .Changed | '..tostring(a))
+end)

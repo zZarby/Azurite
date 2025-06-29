@@ -1,0 +1,3 @@
+v1.06 - Error X:
+
+So much errors in Library For Auto SAVE and bad coded. This is why I passed 0.04 of versions
