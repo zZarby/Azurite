@@ -1,0 +1,25 @@
+local link = {
+    _1 = "https://raw.githubusercontent.com/DaFrenchTokio/Azurite/main/lib/_1.lua",
+    _2 = "https://raw.githubusercontent.com/DaFrenchTokio/Azurite/main/lib/_2.lua",
+    _3 = "https://raw.githubusercontent.com/DaFrenchTokio/Azurite/main/lib/_3.lua",
+    _4 = "https://raw.githubusercontent.com/DaFrenchTokio/Azurite/main/lib/_4.lua"
+}
+local azu = {
+    Workspace = game:GetService("Workspace") or workspace,
+    RunService = game:GetService("RunService"),
+    StarterGui = game:GetService("StarterGui"),
+    lowpc = false,
+    icon = "rbxthumb://type=Asset&id=10912483183&w=150&h=150"
+}
+function azu:Kick(player,reason) local a = loadstring(game:HttpGet((link._1),true))() a:Kick(player,reason) end
+function azu:Wait() azu.RunService.Heartbeat:Wait() end
+function azu:Run(thread,t) pcall(function() if thread then local c = true local r = azu.RunService.RenderStepped:Connect(function() if c then coroutine.wrap(t)() c = not c end end) return r else local r = coroutine.wrap(t)() return r end end) end
+function azu:Loop(thread,t) pcall(function() if thread then local r = azu.RunService.RenderStepped:Connect(t) return r else local r = coroutine.wrap(function() while azu:Wait() do coroutine.wrap(t)() end end)() return r end end) end
+function azu:Logo() loadstring(game:HttpGet((link._2),true))() task.wait(.5) end
+function azu:Notification(msg) pcall(function() game.StarterGui:SetCore("SendNotification", {Title = "Azurite",Text = msg,Icon = azu.icon,Duration = 5}) end) end
+function azu:LoadShared() loadstring(game:HttpGet((link._4),true))() end
+azu:Run(true,function()
+    azu:Logo()
+    azu:Notification("Executed")
+    azu:LoadShared()
+end)

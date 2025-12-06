@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Azurite Script</title>
+  </head>
+  <body>
+    <p>loadstring('uwu')()</p>
+  </body>
+</html>
